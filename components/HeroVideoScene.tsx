@@ -113,10 +113,10 @@ export function HeroVideoScene() {
         ref={containerRef}
         className="relative z-30 mx-auto flex min-h-screen w-full max-w-[1500px] flex-col justify-end px-5 pb-24 pt-32 sm:px-8 md:justify-center md:px-12 md:pb-16"
       >
-        <div className="max-w-5xl select-none">
+        <div className="max-w-5xl">
           <h1
             ref={titleRef}
-            className="luxury-heading font-bold text-balance text-[clamp(4.3rem,13vw,12.5rem)] leading-[0.78] text-white will-transform"
+            className="luxury-heading font-bold text-balance text-[clamp(2.6rem,10vw,12.5rem)] leading-[0.78] text-white will-transform"
           >
             LINEA
             <br />
@@ -125,15 +125,15 @@ export function HeroVideoScene() {
           
           <p
             ref={subtitleRef}
-            className="mt-8 max-w-xl text-base font-semibold leading-7 text-white/90 md:text-xl md:leading-8 will-transform"
+            className="mt-8 max-w-2xl text-lg font-medium leading-relaxed text-white/80 md:text-xl md:leading-relaxed"
           >
-            A cinematic journey through high-altitude residences, modernist courtyard houses, and sea-facing architectural collections.
+            A silent collection of modernist volumes aligned to natural daylight.
           </p>
  
-          <div ref={buttonWrapperRef} className="mt-10 inline-block will-transform">
+          <div ref={buttonWrapperRef} className="mt-12 flex flex-wrap gap-5 will-transform">
             <MagneticButton
               href="#properties"
-              className="glass border-white/20 inline-flex h-16 w-56 items-center justify-center rounded-full text-xs uppercase tracking-[0.28em] text-white transition-colors hover:border-white hover:bg-white hover:text-ink"
+              className="glass border-white/20 inline-flex h-13 w-48 sm:h-16 sm:w-56 text-[0.7rem] sm:text-xs uppercase tracking-[0.28em] text-white transition-colors hover:border-white hover:bg-white hover:text-ink"
             >
               <span className="flex items-center gap-3">
                 Explore Residences

@@ -110,7 +110,7 @@ export function CTASection() {
 
       <div
         ref={contentRef}
-        className="relative z-10 mx-auto w-full max-w-4xl text-center select-none will-transform"
+        className="relative z-10 mx-auto w-full max-w-4xl text-center will-transform"
       >
         <p className="mb-5 text-xs font-bold uppercase tracking-[0.38em] text-champagne/82">
           The Acquisition

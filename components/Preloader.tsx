@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 
 type PreloaderProps = {
   sources: string[];
@@ -62,33 +61,30 @@ export function Preloader({ sources, onComplete }: PreloaderProps) {
   }, [onComplete, uniqueSources]);
 
   return (
-    <AnimatePresence>
-      {visible ? (
-        <motion.div
-          className="fixed inset-0 z-[100] grid place-items-center bg-ink text-bone"
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-          role="status"
-          aria-live="polite"
-        >
-          <div className="w-[min(28rem,78vw)] text-center">
-            <div className="luxury-heading text-4xl uppercase tracking-normal md:text-6xl">
-              Loading Estates
-            </div>
-            <div className="mt-8 h-px overflow-hidden bg-bone/12">
-              <motion.div
-                className="h-full origin-left bg-champagne"
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: progress / 100 }}
-                transition={{ duration: 0.35, ease: "easeOut" }}
-              />
-            </div>
-            <div className="mt-4 text-xs uppercase tracking-[0.38em] text-bone/55">
-              {progress.toString().padStart(2, "0")}%
-            </div>
-          </div>
-        </motion.div>
-      ) : null}
-    </AnimatePresence>
+    <div
+      className={`fixed inset-0 z-[100] grid place-items-center bg-ink text-bone transition-all duration-[850ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
+        visible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+      }`}
+      role="status"
+      aria-live="polite"
+    >
+      <div className="w-[min(28rem,78vw)] text-center">
+        <div className="luxury-heading text-4xl uppercase tracking-normal md:text-6xl">
+          Loading Estates
+        </div>
+        <div className="mt-8 h-px overflow-hidden bg-bone/12">
+          <div
+            className="h-full origin-left bg-champagne transition-transform duration-300 ease-out"
+            style={{
+              transform: `scaleX(${progress / 100})`,
+              transformOrigin: "left"
+            }}
+          />
+        </div>
+        <div className="mt-4 text-xs uppercase tracking-[0.38em] text-bone/55">
+          {progress.toString().padStart(2, "0")}%
+        </div>
+      </div>
+    </div>
   );
 }

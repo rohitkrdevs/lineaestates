@@ -45,12 +45,12 @@ export function CinematicPage() {
       {/* 5. Luxury Header Navigation */}
       <header className="pointer-events-none fixed inset-x-0 top-0 z-50 w-full bg-ink/75 backdrop-blur-md">
         <nav
-          className="pointer-events-auto mx-auto flex max-w-[1600px] items-center justify-between px-8 py-5 md:px-16 md:py-6 text-bone/90"
+          className="pointer-events-auto mx-auto flex max-w-[1600px] items-center justify-between px-6 py-4 md:px-16 md:py-6 text-bone/90"
           aria-label="Main Navigation"
         >
           <a
             href="#"
-            className="focus-ring luxury-heading text-3xl font-bold tracking-[0.2em] uppercase hover:text-champagne transition-colors duration-300"
+            className="focus-ring luxury-heading text-2xl sm:text-3xl font-bold tracking-[0.2em] uppercase hover:text-champagne transition-colors duration-300"
           >
             LINEA
           </a>
@@ -73,7 +73,7 @@ export function CinematicPage() {
           <div className="flex items-center">
             <a
               href="#contact"
-              className="focus-ring inline-flex h-12 w-48 items-center justify-center border border-bone bg-bone text-xs font-bold uppercase tracking-[0.26em] text-ink transition-colors duration-300 hover:bg-transparent hover:text-bone"
+              className="focus-ring inline-flex h-10 px-6 md:h-12 md:px-10 items-center justify-center border border-bone bg-bone text-[0.7rem] md:text-xs font-bold uppercase tracking-[0.26em] text-ink transition-colors duration-300 hover:bg-transparent hover:text-bone"
             >
               Inquire
             </a>

@@ -129,7 +129,7 @@ function ScrollControlledCamera() {
 
 export default function SceneCanvas() {
   return (
-    <div className="pointer-events-none fixed inset-0 z-20 opacity-75" aria-hidden="true">
+    <div className="pointer-events-none fixed inset-0 z-0 opacity-75" aria-hidden="true">
       <Canvas
         fallback={
           <div className="absolute right-[8vw] top-[28vh] h-44 w-64 border border-champagne/20" />

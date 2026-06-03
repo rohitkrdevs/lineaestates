@@ -128,10 +128,14 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
         0.15
       );
 
+      const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+      const slideX = isDesktop ? side * 120 : 0;
+      const slideY = isDesktop ? 0 : 80;
+
       tl.fromTo(
         details,
-        { x: side * 120, opacity: 0, scale: 0.96 },
-        { x: 0, opacity: 1, scale: 1, ease: "power3.out" },
+        { x: slideX, y: slideY, opacity: 0, scale: 0.96 },
+        { x: 0, y: 0, opacity: 1, scale: 1, ease: "power3.out" },
         0.28
       );
 
@@ -175,7 +179,7 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
         <svg
           className="h-full w-full text-bone/20"
           viewBox="0 0 1920 56"
-          preserveAspectRatio="none"
+          preserveAspectRatio="xMidYMid slice"
           fill="none"
           stroke="currentColor"
         >
@@ -215,7 +219,7 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
         <svg
           className="h-full w-full text-bone/20"
           viewBox="0 0 1920 56"
-          preserveAspectRatio="none"
+          preserveAspectRatio="xMidYMid slice"
           fill="none"
           stroke="currentColor"
         >
@@ -248,7 +252,7 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
       >
         {/* Title and ID columns */}
         <div className={alignRight ? "lg:order-2" : ""}>
-          <div className="relative select-none">
+          <div className="relative">
             <div
               ref={numberRef}
               className="luxury-heading absolute -top-14 -left-4 text-[7.5rem] leading-[0] text-champagne/15 select-none will-transform md:-top-20 md:-left-8 md:text-[11.5rem]"
@@ -264,7 +268,7 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
             <h2
               id={`property-${property.id}`}
               ref={titleRef}
-              className="luxury-heading font-bold max-w-2xl text-balance text-[clamp(2.8rem,7vw,7.8rem)] leading-[0.88] text-white will-transform"
+              className="luxury-heading font-bold max-w-2xl text-balance text-[clamp(2.2rem,6vw,7.8rem)] leading-[0.88] text-white will-transform"
             >
               {property.title}
             </h2>

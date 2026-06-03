@@ -52,14 +52,17 @@ export function ServicesSection() {
       const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       if (reduced) return;
 
-      // Pin the left column description while scrolling the right column list
-      ScrollTrigger.create({
-        trigger: container,
-        start: "top 12%",
-        end: "bottom 92%",
-        pin: leftCol,
-        pinSpacing: false
-      });
+      // Pin the left column description while scrolling the right column list ONLY on desktop (min-width: 1024px)
+      const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+      if (isDesktop) {
+        ScrollTrigger.create({
+          trigger: container,
+          start: "top 12%",
+          end: "bottom 92%",
+          pin: leftCol,
+          pinSpacing: false
+        });
+      }
 
       // Highlight active service item in viewport center
       items.forEach((item) => {
