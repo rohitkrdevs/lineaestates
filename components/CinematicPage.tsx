@@ -46,42 +46,59 @@ export function CinematicPage() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-40 flex flex-col bg-ink/96 backdrop-blur-2xl px-8 py-28 overflow-y-auto transition-all duration-500 ease-in-out md:hidden ${
-          mobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        className={`fixed inset-0 z-40 flex flex-col bg-ink/97 backdrop-blur-3xl px-8 py-28 overflow-y-auto transition-all duration-[750ms] ease-[cubic-bezier(0.85,0,0.15,1)] md:hidden ${
+          mobileMenuOpen ? "translate-x-0 opacity-100 pointer-events-auto" : "translate-x-full opacity-0 pointer-events-none"
         }`}
       >
         <nav className="flex flex-col gap-8 text-2xl font-bold uppercase tracking-[0.24em] text-bone/90 mt-10">
           <a
             onClick={() => setMobileMenuOpen(false)}
-            className="hover:text-champagne transition-colors duration-300"
+            className={`hover:text-champagne transition-all duration-500 ease-out transform ${
+              mobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+            style={{ transitionDelay: "150ms" }}
             href="#about"
           >
             Philosophy
           </a>
           <a
             onClick={() => setMobileMenuOpen(false)}
-            className="hover:text-champagne transition-colors duration-300"
+            className={`hover:text-champagne transition-all duration-500 ease-out transform ${
+              mobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+            style={{ transitionDelay: "200ms" }}
             href="#services"
           >
             Services
           </a>
           <a
             onClick={() => setMobileMenuOpen(false)}
-            className="hover:text-champagne transition-colors duration-300"
+            className={`hover:text-champagne transition-all duration-500 ease-out transform ${
+              mobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+            style={{ transitionDelay: "250ms" }}
             href="#properties"
           >
             Residences
           </a>
           <a
             onClick={() => setMobileMenuOpen(false)}
-            className="hover:text-champagne transition-colors duration-300"
+            className={`hover:text-champagne transition-all duration-500 ease-out transform ${
+              mobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+            style={{ transitionDelay: "300ms" }}
             href="#journal"
           >
             Journal
           </a>
         </nav>
         
-        <div className="mt-auto border-t border-bone/10 pt-8">
+        <div
+          className={`mt-auto border-t border-bone/10 pt-8 transition-all duration-500 ease-out transform ${
+            mobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          }`}
+          style={{ transitionDelay: "350ms" }}
+        >
           <div className="text-[0.65rem] uppercase tracking-[0.3em] text-champagne/82 font-bold mb-2">
             LINEA HQ
           </div>
