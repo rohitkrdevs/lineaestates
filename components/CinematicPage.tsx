@@ -22,7 +22,7 @@ export function CinematicPage() {
 
   // Collect all video sources for caching in preloader
   const videoSources = useMemo(
-    () => ["/videos/building.mp4", ...properties.map((property) => property.video)],
+    () => ["/videos/home-5.mp4", ...properties.map((property) => property.video)],
     []
   );
 

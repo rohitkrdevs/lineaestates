@@ -58,17 +58,5 @@ export const properties: Property[] = [
       "A high-altitude residence composed for skyline drama, soft reflection, and late-night entertaining.",
     tone: "City glass, graphite metal, and precise evening light.",
     reveal: "slide"
-  },
-  {
-    id: "05",
-    video: "/videos/home-5.mp4",
-    title: "Coastal Gallery Home",
-    location: "Montecito Coast",
-    size: "9,100 sq ft",
-    type: "Collector Residence",
-    description:
-      "An artful coastal home shaped as a sequence of galleries, terraces, and horizon-facing rooms.",
-    tone: "Soft limestone, framed views, and gallery-like calm.",
-    reveal: "scale"
   }
 ];

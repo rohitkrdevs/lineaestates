@@ -58,8 +58,9 @@ export function HeroVideoScene() {
       });
 
       // Animate text upward and fade it
-      tl.to(
+      tl.fromTo(
         [title, subtitle],
+        { yPercent: 0, opacity: 1 },
         {
           yPercent: -50,
           opacity: 0,
@@ -69,8 +70,9 @@ export function HeroVideoScene() {
       );
 
       // Animate button out
-      tl.to(
+      tl.fromTo(
         btn,
+        { yPercent: 0, opacity: 1, scale: 1 },
         {
           yPercent: -30,
           opacity: 0,
@@ -96,11 +98,11 @@ export function HeroVideoScene() {
   return (
     <section
       ref={sectionRef}
-      className="section-shell relative isolate flex items-center overflow-hidden bg-ink"
+      className="relative isolate flex h-[75vh] md:h-screen md:min-h-screen items-center overflow-hidden bg-ink"
       aria-label="The Building Introduction"
     >
       {/* Background building video with parallax and custom overlay */}
-      <ScrollVideo src="/videos/building.mp4" parallax overlay={false} priority />
+      <ScrollVideo src="/videos/home-5.mp4" parallax overlay={false} priority />
 
       {/* Interactive dark overlay animated by ScrollTrigger */}
       <div
@@ -111,7 +113,7 @@ export function HeroVideoScene() {
 
       <div
         ref={containerRef}
-        className="relative z-30 mx-auto flex min-h-screen w-full max-w-[1500px] flex-col justify-end px-5 pb-24 pt-32 sm:px-8 md:justify-center md:px-12 md:pb-16"
+        className="relative z-30 mx-auto flex h-full md:min-h-screen w-full max-w-[1500px] flex-col justify-end px-5 pb-16 pt-24 sm:px-8 md:justify-center md:px-12 md:pb-16"
       >
         <div className="max-w-5xl">
           <h1
