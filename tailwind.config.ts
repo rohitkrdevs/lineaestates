@@ -15,8 +15,8 @@ const config: Config = {
         smoke: "var(--smoke)"
       },
       fontFamily: {
-        display: ["Cormorant Garamond", "Georgia", "serif"],
-        sans: ["Inter", "Avenir Next", "Segoe UI", "sans-serif"]
+        display: ["var(--font-cormorant)", "Cormorant Garamond", "Georgia", "serif"],
+        sans: ["var(--font-inter)", "Inter", "Avenir Next", "Segoe UI", "sans-serif"]
       },
       boxShadow: {
         glass: "0 24px 80px rgba(0, 0, 0, 0.32)"

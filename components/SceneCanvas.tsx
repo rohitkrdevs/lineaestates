@@ -4,19 +4,32 @@ import { useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
+// Deterministic pseudo-random number generator (Mulberry32)
+function createDeterministicRandom(seed: number) {
+  let h = seed;
+  return () => {
+    h = Math.imul(h ^ (h >>> 15), 1540483477);
+    h ^= h >>> 13;
+    h = Math.imul(h ^ (h >>> 15), 2048144789);
+    h ^= h >>> 13;
+    return (h >>> 0) / 4294967296;
+  };
+}
+
 // Generates smooth floaty particles that move slowly with scroll parallax
 function FloatingParticles() {
   const pointsRef = useRef<THREE.Points>(null);
   const count = 120;
 
   const [positions, speeds] = useMemo(() => {
+    const random = createDeterministicRandom(12345);
     const pos = new Float32Array(count * 3);
     const spd = new Float32Array(count);
     for (let i = 0; i < count; i++) {
-      pos[i * 3] = (Math.random() - 0.5) * 8;
-      pos[i * 3 + 1] = (Math.random() - 0.5) * 6;
-      pos[i * 3 + 2] = (Math.random() - 0.5) * 6 - 1; // z-axis spread
-      spd[i] = 0.15 + Math.random() * 0.35;
+      pos[i * 3] = (random() - 0.5) * 8;
+      pos[i * 3 + 1] = (random() - 0.5) * 6;
+      pos[i * 3 + 2] = (random() - 0.5) * 6 - 1; // z-axis spread
+      spd[i] = 0.15 + random() * 0.35;
     }
     return [pos, spd];
   }, []);
