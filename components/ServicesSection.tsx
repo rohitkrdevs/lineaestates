@@ -110,7 +110,7 @@ export function ServicesSection() {
     <section
       ref={containerRef}
       id="services"
-      className="relative isolate bg-ink px-5 py-32 sm:px-8 md:px-12 border-t border-bone/5"
+      className="relative isolate bg-ink px-5 py-32 sm:px-8 md:px-12 border-t border-bone/5 overflow-hidden"
       aria-label="Services Portfolio"
     >
       {/* Background animated SVG wireframe */}
