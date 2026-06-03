@@ -8,9 +8,10 @@ type MagneticButtonProps = {
   className?: string;
   href?: string;
   onClick?: () => void;
+  type?: "button" | "submit" | "reset";
 };
 
-export function MagneticButton({ children, className, href, onClick }: MagneticButtonProps) {
+export function MagneticButton({ children, className, href, onClick, type = "button" }: MagneticButtonProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const elementRef = useRef<HTMLDivElement>(null);
 
@@ -77,7 +78,7 @@ export function MagneticButton({ children, className, href, onClick }: MagneticB
           {innerContent}
         </a>
       ) : (
-        <button type="button" className="focus-ring block h-full w-full select-none" onClick={onClick}>
+        <button type={type} className="focus-ring block h-full w-full select-none" onClick={onClick}>
           {innerContent}
         </button>
       )}

@@ -270,7 +270,7 @@ export function ContactSection() {
                 {/* Submit CTA */}
                 <div className="mt-4 flex">
                   <MagneticButton
-                    onClick={undefined}
+                    type="submit"
                     className="glass inline-flex h-13 w-48 items-center justify-center rounded-full text-xs uppercase tracking-[0.24em] text-champagne transition-colors hover:border-champagne/45 hover:bg-champagne hover:text-ink"
                   >
                     Submit Inquiry

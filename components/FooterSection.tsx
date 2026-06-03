@@ -147,7 +147,7 @@ export function FooterSection() {
                 </div>
                 <div className="mt-2 flex">
                   <MagneticButton
-                    onClick={undefined}
+                    type="submit"
                     className="glass inline-flex h-9 w-32 items-center justify-center rounded-full text-xs uppercase tracking-[0.2em] text-champagne transition-colors hover:border-champagne/45 hover:bg-champagne hover:text-ink"
                   >
                     Subscribe

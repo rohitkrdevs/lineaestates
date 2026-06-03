@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useMemo, useState } from "react";
+import { Menu, X } from "lucide-react";
 import { properties } from "@/data/properties";
 import { Preloader } from "./Preloader";
 import { ScrollProgress } from "./ScrollProgress";
@@ -17,6 +18,7 @@ import { FooterSection } from "./FooterSection";
 
 export function CinematicPage() {
   const [ready, setReady] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Collect all video sources for caching in preloader
   const videoSources = useMemo(
@@ -41,6 +43,53 @@ export function CinematicPage() {
 
       {/* 4. Background WebGL 3D Canvas */}
       <ClientOnly3D active={ready} />
+
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`fixed inset-0 z-40 flex flex-col bg-ink/96 backdrop-blur-2xl px-8 py-28 transition-all duration-500 ease-in-out md:hidden ${
+          mobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <nav className="flex flex-col gap-8 text-2xl font-bold uppercase tracking-[0.24em] text-bone/90 mt-10">
+          <a
+            onClick={() => setMobileMenuOpen(false)}
+            className="hover:text-champagne transition-colors duration-300"
+            href="#about"
+          >
+            Philosophy
+          </a>
+          <a
+            onClick={() => setMobileMenuOpen(false)}
+            className="hover:text-champagne transition-colors duration-300"
+            href="#services"
+          >
+            Services
+          </a>
+          <a
+            onClick={() => setMobileMenuOpen(false)}
+            className="hover:text-champagne transition-colors duration-300"
+            href="#properties"
+          >
+            Residences
+          </a>
+          <a
+            onClick={() => setMobileMenuOpen(false)}
+            className="hover:text-champagne transition-colors duration-300"
+            href="#journal"
+          >
+            Journal
+          </a>
+        </nav>
+        
+        <div className="mt-auto border-t border-bone/10 pt-8">
+          <div className="text-[0.65rem] uppercase tracking-[0.3em] text-champagne/82 font-bold mb-2">
+            LINEA HQ
+          </div>
+          <div className="text-xs uppercase tracking-widest text-bone/50">
+            34.0194° N, 118.4912° W
+          </div>
+        </div>
+      </div>
 
       {/* 5. Luxury Header Navigation */}
       <header className="pointer-events-none fixed inset-x-0 top-0 z-50 w-full bg-ink/75 backdrop-blur-md">
@@ -70,13 +119,22 @@ export function CinematicPage() {
             </a>
           </div>
 
-          <div className="flex items-center">
+          <div className="flex items-center gap-4">
             <a
               href="#contact"
               className="focus-ring inline-flex h-10 px-6 md:h-12 md:px-10 items-center justify-center border border-bone bg-bone text-[0.7rem] md:text-xs font-bold uppercase tracking-[0.26em] text-ink transition-colors duration-300 hover:bg-transparent hover:text-bone"
             >
               Inquire
             </a>
+
+            {/* Mobile menu toggle */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="focus-ring flex h-10 w-10 items-center justify-center border border-bone/20 text-bone hover:border-bone transition-colors duration-300 md:hidden"
+              aria-label={mobileMenuOpen ? "Close Menu" : "Open Menu"}
+            >
+              {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
           </div>
         </nav>
       </header>
