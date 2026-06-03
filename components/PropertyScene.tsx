@@ -208,11 +208,6 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
           <circle cx="40" cy="28" r="3" fill="currentColor" />
           <circle cx="1880" cy="28" r="3" fill="currentColor" />
         </svg>
-        <div className="absolute inset-0 flex justify-between items-center px-6 md:px-10 text-xs font-bold uppercase tracking-[0.32em] text-champagne">
-          <span className="backdrop-blur-[2px] px-2 py-0.5 bg-black/10 rounded">LINEA.SYS // ELEVATION_X_0{index + 1}</span>
-          <span className="hidden sm:inline backdrop-blur-[2px] px-2 py-0.5 bg-black/10 rounded">SCENE_0{index + 1} // RDR_UNIT</span>
-          <span className="backdrop-blur-[2px] px-2 py-0.5 bg-black/10 rounded">{COORDINATES[property.location] || "34.0259° N, 118.7798° W"}</span>
-        </div>
       </div>
 
       {/* Bottom Architectural SVG Divider */}
@@ -244,11 +239,6 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
           <line x1="945" y1="28" x2="975" y2="28" strokeWidth="2" />
           <line x1="960" y1="13" x2="960" y2="43" strokeWidth="2" />
         </svg>
-        <div className="absolute inset-0 flex justify-between items-center px-6 md:px-10 text-xs font-bold uppercase tracking-[0.32em] text-champagne">
-          <span className="backdrop-blur-[2px] px-2 py-0.5 bg-black/10 rounded">RESIDENCE_0{property.id} // SEC_RDR</span>
-          <span className="hidden sm:inline backdrop-blur-[2px] px-2 py-0.5 bg-black/10 rounded">SCALE 1 : 250 // GRID_ALIGN</span>
-          <span className="backdrop-blur-[2px] px-2 py-0.5 bg-black/10 rounded">MODEL_REF // {property.size}</span>
-        </div>
       </div>
 
       {/* Main content grid */}
