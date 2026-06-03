@@ -29,7 +29,7 @@ export function ScrollProgress() {
 
   return (
     <div className="fixed right-6 top-1/2 z-50 hidden -translate-y-1/2 flex-col items-center gap-4 md:flex mix-blend-difference" aria-hidden="true">
-      <span className="text-[0.6rem] font-light tracking-[0.28em] text-champagne/82 select-none">
+      <span className="text-xs font-light tracking-[0.28em] text-champagne/82 select-none">
         {progress.toString().padStart(3, "0")}
       </span>
       <div className="h-44 w-px bg-bone/12 relative overflow-hidden">

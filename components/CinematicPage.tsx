@@ -43,29 +43,29 @@ export function CinematicPage() {
       <ClientOnly3D active={ready} />
 
       {/* 5. Luxury Header Navigation */}
-      <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-6 py-6 sm:px-8">
+      <header className="pointer-events-none fixed inset-x-0 top-0 z-50 w-full bg-ink/75 backdrop-blur-md border-b border-bone/8">
         <nav
-          className="glass pointer-events-auto mx-auto flex max-w-[1500px] items-center justify-between rounded-full px-10 py-5 text-bone/85"
+          className="pointer-events-auto mx-auto flex max-w-[1600px] items-center justify-between px-8 py-5 md:px-16 md:py-6 text-bone/90"
           aria-label="Main Navigation"
         >
           <a
             href="#"
-            className="focus-ring luxury-heading text-2xl font-bold tracking-[0.18em] uppercase hover:text-white transition-colors"
+            className="focus-ring luxury-heading text-3xl font-bold tracking-[0.2em] uppercase hover:text-champagne transition-colors duration-300"
           >
             LINEA
           </a>
 
-          <div className="hidden items-center gap-12 text-[0.8rem] font-bold uppercase tracking-[0.32em] text-bone/75 md:flex">
-            <a className="focus-ring transition-colors hover:text-bone" href="#about">
+          <div className="hidden items-center gap-16 text-sm font-bold uppercase tracking-[0.36em] text-bone/75 md:flex">
+            <a className="focus-ring transition-colors hover:text-champagne duration-300" href="#about">
               Philosophy
             </a>
-            <a className="focus-ring transition-colors hover:text-bone" href="#services">
+            <a className="focus-ring transition-colors hover:text-champagne duration-300" href="#services">
               Services
             </a>
-            <a className="focus-ring transition-colors hover:text-bone" href="#properties">
+            <a className="focus-ring transition-colors hover:text-champagne duration-300" href="#properties">
               Residences
             </a>
-            <a className="focus-ring transition-colors hover:text-bone" href="#journal">
+            <a className="focus-ring transition-colors hover:text-champagne duration-300" href="#journal">
               Journal
             </a>
           </div>
@@ -73,7 +73,7 @@ export function CinematicPage() {
           <div className="flex items-center">
             <a
               href="#contact"
-              className="focus-ring inline-flex h-11 items-center justify-center rounded-full bg-bone px-8 text-xs font-bold uppercase tracking-[0.24em] text-ink transition-colors hover:bg-champagne hover:text-white"
+              className="focus-ring inline-flex h-12 w-48 items-center justify-center border border-bone bg-bone text-xs font-bold uppercase tracking-[0.26em] text-ink transition-colors duration-300 hover:bg-transparent hover:text-bone"
             >
               Inquire
             </a>

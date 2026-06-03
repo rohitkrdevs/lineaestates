@@ -165,7 +165,7 @@ export function BlogsSection() {
                     <div className="absolute inset-0 bg-ink/10 group-hover:bg-transparent transition-colors duration-500" />
                   </div>
 
-                  <div className="flex items-center justify-between text-[0.6rem] uppercase tracking-[0.24em] text-bone/45">
+                  <div className="flex items-center justify-between text-xs uppercase tracking-[0.24em] text-bone/45">
                     <span>{article.tag}</span>
                     <span>{article.date}</span>
                   </div>

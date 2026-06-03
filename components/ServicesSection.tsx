@@ -168,7 +168,7 @@ export function ServicesSection() {
                 {service.details.map((detail, idx) => (
                   <span
                     key={idx}
-                    className="rounded-full border border-bone/10 bg-bone/[0.03] px-4 py-1.5 text-[0.62rem] uppercase tracking-widest text-bone/58"
+                    className="rounded-full border border-bone/10 bg-bone/[0.03] px-4 py-1.5 text-xs uppercase tracking-widest text-bone/58"
                   >
                     {detail}
                   </span>

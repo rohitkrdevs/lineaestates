@@ -148,7 +148,7 @@ export function FooterSection() {
                 <div className="mt-2 flex">
                   <MagneticButton
                     onClick={undefined}
-                    className="glass inline-flex h-9 w-32 items-center justify-center rounded-full text-[0.58rem] uppercase tracking-[0.2em] text-champagne transition-colors hover:border-champagne/45 hover:bg-champagne hover:text-ink"
+                    className="glass inline-flex h-9 w-32 items-center justify-center rounded-full text-xs uppercase tracking-[0.2em] text-champagne transition-colors hover:border-champagne/45 hover:bg-champagne hover:text-ink"
                   >
                     Subscribe
                   </MagneticButton>
@@ -156,7 +156,7 @@ export function FooterSection() {
               </form>
             ) : (
               <div className="py-2">
-                <span className="text-[0.62rem] uppercase tracking-[0.24em] text-champagne">
+                <span className="text-xs uppercase tracking-[0.24em] text-champagne">
                   Confirmed
                 </span>
                 <p className="mt-3 text-xs leading-5 text-bone/58">
@@ -178,7 +178,7 @@ export function FooterSection() {
         </div>
 
         {/* Bottom footer bar */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-6 pt-4 text-[0.58rem] uppercase tracking-[0.26em] text-bone/35 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-6 pt-4 text-xs uppercase tracking-[0.26em] text-bone/35 sm:flex-row">
           <div>© 2026 Linea Estates. All rights reserved.</div>
           <div className="flex gap-8">
             <a href="#" className="hover:text-bone transition-colors">Privacy Policy</a>

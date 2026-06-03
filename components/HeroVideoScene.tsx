@@ -145,7 +145,7 @@ export function HeroVideoScene() {
       </div>
 
       {/* Floating scroll indicator */}
-      <div className="absolute bottom-7 left-1/2 z-30 flex -translate-x-1/2 flex-col items-center gap-3 text-[0.6rem] uppercase tracking-[0.36em] text-bone/58 mix-blend-difference select-none" aria-hidden="true">
+      <div className="absolute bottom-7 left-1/2 z-30 flex -translate-x-1/2 flex-col items-center gap-3 text-xs uppercase tracking-[0.36em] text-bone/58 mix-blend-difference select-none" aria-hidden="true">
         <span>Scroll</span>
         <span className="h-14 w-px overflow-hidden bg-bone/18">
           <span className="block h-1/2 w-px animate-[scrollPulse_1.8s_ease-in-out_infinite] bg-champagne" />

@@ -171,9 +171,9 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
       </div>
 
       {/* Top Architectural SVG Divider */}
-      <div className="absolute top-0 inset-x-0 z-20 h-14 w-full border-t border-champagne/15 pointer-events-none select-none">
+      <div className="absolute top-0 inset-x-0 z-20 h-14 w-full border-t border-bone/10 pointer-events-none select-none">
         <svg
-          className="h-full w-full text-champagne opacity-85"
+          className="h-full w-full text-bone/20"
           viewBox="0 0 1920 56"
           preserveAspectRatio="none"
           fill="none"
@@ -209,7 +209,7 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
           <circle cx="40" cy="28" r="3" fill="currentColor" />
           <circle cx="1880" cy="28" r="3" fill="currentColor" />
         </svg>
-        <div className="absolute inset-0 flex justify-between items-center px-6 md:px-10 text-[0.68rem] font-bold uppercase tracking-[0.32em] text-champagne">
+        <div className="absolute inset-0 flex justify-between items-center px-6 md:px-10 text-xs font-bold uppercase tracking-[0.32em] text-champagne">
           <span className="backdrop-blur-[2px] px-2 py-0.5 bg-black/10 rounded">LINEA.SYS // ELEVATION_X_0{index + 1}</span>
           <span className="hidden sm:inline backdrop-blur-[2px] px-2 py-0.5 bg-black/10 rounded">SCENE_0{index + 1} // RDR_UNIT</span>
           <span className="backdrop-blur-[2px] px-2 py-0.5 bg-black/10 rounded">{COORDINATES[property.location] || "34.0259° N, 118.7798° W"}</span>
@@ -217,9 +217,9 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
       </div>
 
       {/* Bottom Architectural SVG Divider */}
-      <div className="absolute bottom-0 inset-x-0 z-20 h-14 w-full border-b border-champagne/15 pointer-events-none select-none">
+      <div className="absolute bottom-0 inset-x-0 z-20 h-14 w-full border-b border-bone/10 pointer-events-none select-none">
         <svg
-          className="h-full w-full text-champagne opacity-85"
+          className="h-full w-full text-bone/20"
           viewBox="0 0 1920 56"
           preserveAspectRatio="none"
           fill="none"
@@ -246,7 +246,7 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
           <line x1="945" y1="28" x2="975" y2="28" strokeWidth="2" />
           <line x1="960" y1="13" x2="960" y2="43" strokeWidth="2" />
         </svg>
-        <div className="absolute inset-0 flex justify-between items-center px-6 md:px-10 text-[0.68rem] font-bold uppercase tracking-[0.32em] text-champagne">
+        <div className="absolute inset-0 flex justify-between items-center px-6 md:px-10 text-xs font-bold uppercase tracking-[0.32em] text-champagne">
           <span className="backdrop-blur-[2px] px-2 py-0.5 bg-black/10 rounded">RESIDENCE_0{property.id} // SEC_RDR</span>
           <span className="hidden sm:inline backdrop-blur-[2px] px-2 py-0.5 bg-black/10 rounded">SCALE 1 : 250 // GRID_ALIGN</span>
           <span className="backdrop-blur-[2px] px-2 py-0.5 bg-black/10 rounded">MODEL_REF // {property.size}</span>
@@ -268,9 +268,9 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
             >
               {property.id}
             </div>
-            <div className="mb-5 flex items-center gap-4 text-[0.65rem] uppercase tracking-[0.34em] text-champagne/90">
+            <div className="mb-5 flex items-center gap-4 text-xs uppercase tracking-[0.34em] text-champagne/90">
               <span>Residence</span>
-              <span className="h-px w-10 bg-champagne/35" />
+              <span className="h-px w-10 bg-bone/20" />
               <span>{property.location}</span>
             </div>
             <h2
@@ -298,13 +298,13 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
             <p className="mt-6 text-sm leading-6 text-bone/75 md:text-base md:leading-7">
               {property.description}
             </p>
-            <p className="mt-4 text-[0.72rem] italic leading-5 text-bone/45 tracking-wide">
+            <p className="mt-4 text-xs italic leading-5 text-bone/45 tracking-wide">
               {property.tone}
             </p>
             <div className="mt-8 flex justify-start">
               <MagneticButton
                 href={`mailto:studio@lineaestates.com?subject=Inquiry: ${property.title}`}
-                className="glass inline-flex h-12 w-48 items-center justify-center rounded-full text-[0.68rem] uppercase tracking-[0.24em] text-champagne transition-colors hover:border-champagne/40 hover:bg-champagne hover:text-ink"
+                className="glass inline-flex h-12 w-48 items-center justify-center rounded-full text-xs uppercase tracking-[0.24em] text-champagne transition-colors hover:border-champagne/40 hover:bg-champagne hover:text-ink"
               >
                 <span className="flex items-center gap-2">
                   Request Viewing
@@ -322,7 +322,7 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
 function Meta({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <div className="text-[0.58rem] uppercase tracking-[0.26em] text-bone/42">{label}</div>
+      <div className="text-xs uppercase tracking-[0.26em] text-bone/42">{label}</div>
       <div className="mt-1.5 text-sm font-light text-bone md:text-base">{value}</div>
     </div>
   );

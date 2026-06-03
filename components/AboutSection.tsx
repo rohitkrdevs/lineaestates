@@ -108,7 +108,7 @@ export function AboutSection() {
           <p className="mb-5 text-xs font-bold uppercase tracking-[0.38em] text-champagne/82">
             The Philosophy
           </p>
-          <div ref={lineRef} className="h-px w-24 bg-champagne/40 origin-left mb-10 will-transform" />
+          <div ref={lineRef} className="h-px w-24 bg-bone/15 origin-left mb-10 will-transform" />
           <p
             ref={textRef}
             className="luxury-heading text-balance text-2xl font-semibold leading-relaxed text-bone sm:text-3xl sm:leading-relaxed md:text-4xl md:leading-[1.75]"

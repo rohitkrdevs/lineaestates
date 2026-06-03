@@ -249,7 +249,7 @@ export function ContactSection() {
                       General Inquiry (Unlisted Portfolio)
                     </option>
                   </select>
-                  <div className="pointer-events-none absolute right-1 top-1/2 -translate-y-1/2 text-[0.62rem] uppercase tracking-widest text-champagne/65">
+                  <div className="pointer-events-none absolute right-1 top-1/2 -translate-y-1/2 text-xs uppercase tracking-widest text-champagne/65">
                     ▼
                   </div>
                 </div>
@@ -294,7 +294,7 @@ export function ContactSection() {
                       setFormState({ name: "", email: "", property: "", message: "" });
                       setSubmitted(false);
                     }}
-                    className="glass inline-flex h-11 w-44 items-center justify-center rounded-full text-[0.65rem] uppercase tracking-[0.25em] text-bone/65 transition-colors hover:bg-bone hover:text-ink"
+                    className="glass inline-flex h-11 w-44 items-center justify-center rounded-full text-xs uppercase tracking-[0.25em] text-bone/65 transition-colors hover:bg-bone hover:text-ink"
                   >
                     Submit Another
                   </MagneticButton>
