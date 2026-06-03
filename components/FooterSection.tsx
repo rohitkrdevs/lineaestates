@@ -73,15 +73,15 @@ export function FooterSection() {
   );
 
   return (
-    <footer ref={footerRef} className="relative isolate border-t border-bone/6 bg-ink/95 px-5 py-20 text-bone/90" aria-label="Footer">
+    <footer ref={footerRef} className="relative isolate border-t border-bone/6 bg-ink/95 px-5 py-20 text-bone/90 overflow-hidden" aria-label="Footer">
       <div className="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent pointer-events-none" />
 
       <div className="relative z-10 mx-auto w-full max-w-[1500px]">
         {/* Top footer grid */}
-        <div ref={gridRef} className="grid grid-cols-1 gap-12 border-b border-bone/6 pb-16 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
+        <div ref={gridRef} className="grid grid-cols-2 gap-x-8 gap-y-12 border-b border-bone/6 pb-16 md:grid-cols-4 lg:grid-cols-5">
           
           {/* Brand Col */}
-          <div className="lg:col-span-2">
+          <div className="col-span-2 md:col-span-4 lg:col-span-2">
             <span className="luxury-heading text-2xl font-bold tracking-[0.2em] uppercase text-bone select-none">
               LINEA
             </span>
@@ -91,7 +91,7 @@ export function FooterSection() {
           </div>
 
           {/* Directory Col */}
-          <div>
+          <div className="col-span-1">
             <h4 className="text-xs uppercase tracking-[0.28em] text-champagne/82 mb-6 font-bold">
               Directory
             </h4>
@@ -105,7 +105,7 @@ export function FooterSection() {
           </div>
 
           {/* Locations Col */}
-          <div>
+          <div className="col-span-1">
             <h4 className="text-xs uppercase tracking-[0.28em] text-champagne/82 mb-6 font-bold">
               Locations
             </h4>
@@ -126,7 +126,7 @@ export function FooterSection() {
           </div>
 
           {/* Newsletter Col */}
-          <div>
+          <div className="col-span-2 md:col-span-2 lg:col-span-1">
             <h4 className="text-xs uppercase tracking-[0.28em] text-champagne/82 mb-6 font-bold">
               Newsletter
             </h4>
@@ -171,7 +171,7 @@ export function FooterSection() {
         <div className="relative w-full overflow-x-hidden py-4 select-none pointer-events-none my-6">
           <div
             ref={brandTextRef}
-            className="select-none text-[clamp(4rem,20vw,16rem)] font-bold tracking-[0.2em] text-bone/[0.035] will-transform text-center whitespace-nowrap uppercase leading-none"
+            className="select-none text-[clamp(3rem,15vw,16rem)] font-bold tracking-[0.2em] text-bone/[0.035] will-transform text-center whitespace-nowrap uppercase leading-none"
           >
             LINEA
           </div>
@@ -180,7 +180,7 @@ export function FooterSection() {
         {/* Bottom footer bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-6 pt-4 text-xs uppercase tracking-[0.26em] text-bone/35 sm:flex-row">
           <div>© 2026 Linea Estates. All rights reserved.</div>
-          <div className="flex gap-8">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 sm:gap-8">
             <a href="#" className="hover:text-bone transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-bone transition-colors">Terms of Service</a>
             <a href="#" className="hover:text-bone transition-colors">Instagram</a>

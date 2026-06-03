@@ -31,7 +31,7 @@ export function CinematicPage() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-ink text-bone font-sans">
+    <div className="relative min-h-screen bg-ink text-bone font-sans overflow-x-hidden">
       {/* 1. Cinematic Preloader */}
       <Preloader sources={videoSources} onComplete={handlePreloaderComplete} />
 
@@ -46,7 +46,7 @@ export function CinematicPage() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-40 flex flex-col bg-ink/96 backdrop-blur-2xl px-8 py-28 transition-all duration-500 ease-in-out md:hidden ${
+        className={`fixed inset-0 z-40 flex flex-col bg-ink/96 backdrop-blur-2xl px-8 py-28 overflow-y-auto transition-all duration-500 ease-in-out md:hidden ${
           mobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
