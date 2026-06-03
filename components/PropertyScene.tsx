@@ -171,7 +171,7 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
       </div>
 
       {/* Top Architectural SVG Divider */}
-      <div className="absolute top-0 inset-x-0 z-20 h-14 w-full border-t border-bone/10 pointer-events-none select-none">
+      <div className="absolute top-0 inset-x-0 z-20 h-14 w-full pointer-events-none select-none">
         <svg
           className="h-full w-full text-bone/20"
           viewBox="0 0 1920 56"
@@ -179,7 +179,6 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
           fill="none"
           stroke="currentColor"
         >
-          <line x1="0" y1="28" x2="1920" y2="28" strokeWidth="2.5" />
           <path
             d="
               M 40,20 L 40,36
@@ -217,7 +216,7 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
       </div>
 
       {/* Bottom Architectural SVG Divider */}
-      <div className="absolute bottom-0 inset-x-0 z-20 h-14 w-full border-b border-bone/10 pointer-events-none select-none">
+      <div className="absolute bottom-0 inset-x-0 z-20 h-14 w-full pointer-events-none select-none">
         <svg
           className="h-full w-full text-bone/20"
           viewBox="0 0 1920 56"
@@ -225,7 +224,6 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
           fill="none"
           stroke="currentColor"
         >
-          <line x1="0" y1="28" x2="1920" y2="28" strokeWidth="2.5" />
           <path
             d="
               M 40,20 L 40,36
@@ -268,9 +266,9 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
             >
               {property.id}
             </div>
-            <div className="mb-5 flex items-center gap-4 text-xs uppercase tracking-[0.34em] text-champagne/90">
+            <div className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.34em] text-champagne/90">
               <span>Residence</span>
-              <span className="h-px w-10 bg-bone/20" />
+              <span className="opacity-40">•</span>
               <span>{property.location}</span>
             </div>
             <h2

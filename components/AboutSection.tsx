@@ -18,7 +18,7 @@ export function AboutSection() {
       const text = textRef.current;
       const line = lineRef.current;
       const svg = svgRef.current;
-      if (!text || !line) return;
+      if (!text) return;
 
       const words = text.innerText.split(" ");
       text.innerHTML = words
@@ -42,12 +42,14 @@ export function AboutSection() {
         ease: "power1.out"
       }, 0);
 
-      tl.fromTo(
-        line,
-        { scaleX: 0 },
-        { scaleX: 1, ease: "power2.out" },
-        0
-      );
+      if (line) {
+        tl.fromTo(
+          line,
+          { scaleX: 0 },
+          { scaleX: 1, ease: "power2.out" },
+          0
+        );
+      }
 
       // SVG Scroll parallax
       if (svg) {
@@ -108,7 +110,6 @@ export function AboutSection() {
           <p className="mb-5 text-xs font-bold uppercase tracking-[0.38em] text-champagne/82">
             The Philosophy
           </p>
-          <div ref={lineRef} className="h-px w-24 bg-bone/15 origin-left mb-10 will-transform" />
           <p
             ref={textRef}
             className="luxury-heading text-balance text-2xl font-semibold leading-relaxed text-bone sm:text-3xl sm:leading-relaxed md:text-4xl md:leading-[1.75]"

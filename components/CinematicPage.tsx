@@ -43,7 +43,7 @@ export function CinematicPage() {
       <ClientOnly3D active={ready} />
 
       {/* 5. Luxury Header Navigation */}
-      <header className="pointer-events-none fixed inset-x-0 top-0 z-50 w-full bg-ink/75 backdrop-blur-md border-b border-bone/8">
+      <header className="pointer-events-none fixed inset-x-0 top-0 z-50 w-full bg-ink/75 backdrop-blur-md">
         <nav
           className="pointer-events-auto mx-auto flex max-w-[1600px] items-center justify-between px-8 py-5 md:px-16 md:py-6 text-bone/90"
           aria-label="Main Navigation"
