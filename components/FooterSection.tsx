@@ -168,11 +168,13 @@ export function FooterSection() {
         </div>
 
         {/* Large LINEA watermark inline between menu and copyright */}
-        <div
-          ref={brandTextRef}
-          className="pointer-events-none select-none text-[clamp(4rem,20vw,16rem)] font-bold tracking-[0.2em] text-bone/[0.035] will-transform text-center whitespace-nowrap uppercase leading-none my-12"
-        >
-          LINEA
+        <div className="relative w-full overflow-x-hidden py-4 select-none pointer-events-none my-6">
+          <div
+            ref={brandTextRef}
+            className="select-none text-[clamp(4rem,20vw,16rem)] font-bold tracking-[0.2em] text-bone/[0.035] will-transform text-center whitespace-nowrap uppercase leading-none"
+          >
+            LINEA
+          </div>
         </div>
 
         {/* Bottom footer bar */}
