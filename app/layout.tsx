@@ -49,7 +49,10 @@ const cormorant = localFont({
 export const metadata: Metadata = {
   title: "LINEA Estates | Cinematic Luxury Portfolio",
   description:
-    "An immersive portfolio of modern architectural spaces told through scroll-driven property films."
+    "An immersive portfolio of modern architectural spaces told through scroll-driven property films.",
+  icons: {
+    icon: "/favicon.png"
+  }
 };
 
 export const viewport: Viewport = {
