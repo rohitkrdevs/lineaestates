@@ -98,7 +98,7 @@ export function HeroVideoScene() {
   return (
     <section
       ref={sectionRef}
-      className="relative isolate flex h-[75vh] md:h-screen md:min-h-screen items-center overflow-hidden bg-transparent"
+      className="relative isolate flex h-screen md:min-h-screen items-center overflow-hidden bg-transparent"
       aria-label="The Building Introduction"
     >
       {/* Background building video with parallax and custom overlay */}
