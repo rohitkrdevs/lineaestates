@@ -40,8 +40,8 @@ export function SmoothScrollProvider({ children }: PropsWithChildren) {
         const targetElement = document.querySelector(href) as HTMLElement | null;
         if (targetElement) {
           lenis.scrollTo(targetElement, {
-            offset: 0,
-            duration: 1.25,
+            offset: -80,
+            duration: 1.4,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
           });
         }
