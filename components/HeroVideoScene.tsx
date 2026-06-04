@@ -98,7 +98,7 @@ export function HeroVideoScene() {
   return (
     <section
       ref={sectionRef}
-      className="relative isolate flex h-[75vh] md:h-screen md:min-h-screen items-center overflow-hidden bg-ink"
+      className="relative isolate flex h-[75vh] md:h-screen md:min-h-screen items-center overflow-hidden bg-transparent"
       aria-label="The Building Introduction"
     >
       {/* Background building video with parallax and custom overlay */}
@@ -135,7 +135,7 @@ export function HeroVideoScene() {
           <div ref={buttonWrapperRef} className="mt-12 flex flex-wrap gap-5 will-transform">
             <MagneticButton
               href="#properties"
-              className="glass border-white/20 inline-flex h-13 w-48 sm:h-16 sm:w-56 text-[0.7rem] sm:text-xs uppercase tracking-[0.28em] text-white transition-colors hover:border-white hover:bg-white hover:text-ink"
+              className="border border-white/25 inline-flex h-13 w-48 sm:h-16 sm:w-56 text-[0.7rem] sm:text-xs uppercase tracking-[0.28em] text-white transition-colors duration-300 hover:border-white hover:bg-white hover:text-ink"
             >
               <span className="flex items-center gap-3">
                 Explore Residences

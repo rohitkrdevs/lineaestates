@@ -78,7 +78,7 @@ export function AboutSection() {
     <section
       ref={containerRef}
       id="about"
-      className="relative isolate flex min-h-[90vh] items-center bg-ink px-5 py-32 sm:px-8 md:px-12 overflow-hidden"
+      className="relative isolate flex min-h-[90vh] items-center bg-transparent px-5 py-32 sm:px-8 md:px-12 overflow-hidden"
       aria-label="About Us"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bone/[0.01] to-transparent pointer-events-none" />

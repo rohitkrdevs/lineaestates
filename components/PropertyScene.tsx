@@ -160,7 +160,7 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
   return (
     <section
       ref={sectionRef}
-      className="section-shell relative isolate flex items-center overflow-hidden bg-ink"
+      className="section-shell relative isolate flex items-center overflow-hidden bg-transparent"
       aria-labelledby={`property-${property.id}`}
     >
       {/* Mask container that dictates the transition reveal shape */}
@@ -225,7 +225,7 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
             <div className="mt-8 flex justify-start">
               <MagneticButton
                 href={`mailto:studio@lineaestates.com?subject=Inquiry: ${property.title}`}
-                className="glass inline-flex h-12 w-48 items-center justify-center rounded-full text-xs uppercase tracking-[0.24em] text-champagne transition-colors hover:border-champagne/40 hover:bg-champagne hover:text-ink"
+                className="border border-champagne inline-flex h-12 w-48 items-center justify-center text-xs uppercase tracking-[0.24em] text-champagne transition-colors duration-300 hover:bg-champagne hover:text-ink"
               >
                 <span className="flex items-center gap-2">
                   Request Viewing

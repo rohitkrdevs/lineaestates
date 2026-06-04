@@ -73,7 +73,7 @@ export function FooterSection() {
   );
 
   return (
-    <footer ref={footerRef} className="relative isolate border-t border-bone/6 bg-ink/95 px-5 py-20 text-bone/90 overflow-hidden" aria-label="Footer">
+    <footer ref={footerRef} className="relative isolate border-t border-bone/6 bg-ink/65 backdrop-blur-md px-5 py-20 text-bone/90 overflow-hidden" aria-label="Footer">
       <div className="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent pointer-events-none" />
 
       <div className="relative z-10 mx-auto w-full max-w-[1500px]">
@@ -148,7 +148,7 @@ export function FooterSection() {
                 <div className="mt-2 flex">
                   <MagneticButton
                     type="submit"
-                    className="glass inline-flex h-9 w-32 items-center justify-center rounded-full text-xs uppercase tracking-[0.2em] text-champagne transition-colors hover:border-champagne/45 hover:bg-champagne hover:text-ink"
+                    className="border border-champagne inline-flex h-9 w-32 items-center justify-center text-xs uppercase tracking-[0.2em] text-champagne transition-colors duration-300 hover:bg-champagne hover:text-ink"
                   >
                     Subscribe
                   </MagneticButton>

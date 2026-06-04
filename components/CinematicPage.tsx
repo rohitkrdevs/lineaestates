@@ -31,7 +31,7 @@ export function CinematicPage() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-ink text-bone font-sans overflow-x-hidden">
+    <div className="relative min-h-screen bg-transparent text-bone font-sans overflow-x-hidden">
       {/* 1. Cinematic Preloader */}
       <Preloader sources={videoSources} onComplete={handlePreloaderComplete} />
 

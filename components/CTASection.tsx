@@ -95,7 +95,7 @@ export function CTASection() {
   return (
     <section
       ref={sectionRef}
-      className="relative isolate min-h-[85vh] flex items-center justify-center overflow-hidden bg-ink py-28 px-5 border-t border-bone/5"
+      className="relative isolate min-h-[85vh] flex items-center justify-center overflow-hidden bg-transparent py-28 px-5 border-t border-bone/5"
       aria-label="Call to Action"
     >
       {/* Parallax Background Expansion Card with spotlight gradient */}
@@ -105,7 +105,7 @@ export function CTASection() {
           backgroundImage: "radial-gradient(ellipse at 50% var(--spotlight-y, 50%), rgba(158,127,67,0.07), transparent 65%)",
           ["--spotlight-y" as any]: "30%"
         }}
-        className="absolute inset-0 z-0 bg-ink will-transform"
+        className="absolute inset-0 z-0 bg-transparent will-transform"
       />
 
       <div
@@ -127,7 +127,7 @@ export function CTASection() {
         <div className="mt-12 flex justify-center">
           <MagneticButton
             href="#contact"
-            className="glass inline-flex h-16 w-56 items-center justify-center rounded-full text-[0.7rem] uppercase tracking-[0.28em] text-bone transition-colors hover:border-champagne/45 hover:bg-bone hover:text-ink"
+            className="border border-bone inline-flex h-16 w-56 items-center justify-center text-[0.7rem] uppercase tracking-[0.28em] text-bone transition-colors duration-300 hover:bg-bone hover:text-ink"
           >
             <span className="flex items-center gap-2">
               Begin Inquiry

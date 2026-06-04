@@ -110,7 +110,7 @@ export function ServicesSection() {
     <section
       ref={containerRef}
       id="services"
-      className="relative isolate bg-ink px-5 py-32 sm:px-8 md:px-12 border-t border-bone/5 overflow-hidden"
+      className="relative isolate bg-transparent px-5 py-32 sm:px-8 md:px-12 border-t border-bone/5 overflow-hidden"
       aria-label="Services Portfolio"
     >
       {/* Background animated SVG wireframe */}
@@ -171,7 +171,7 @@ export function ServicesSection() {
                 {service.details.map((detail, idx) => (
                   <span
                     key={idx}
-                    className="rounded-full border border-bone/10 bg-bone/[0.03] px-4 py-1.5 text-xs uppercase tracking-widest text-bone/58"
+                    className="border border-bone/10 bg-bone/[0.03] px-4 py-1.5 text-xs uppercase tracking-widest text-bone/58"
                   >
                     {detail}
                   </span>

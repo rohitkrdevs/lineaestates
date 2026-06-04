@@ -166,7 +166,7 @@ export function ContactSection() {
     <section
       ref={containerRef}
       id="contact"
-      className="relative isolate bg-ink px-5 py-32 sm:px-8 md:px-12 border-t border-bone/5"
+      className="relative isolate bg-transparent px-5 py-32 sm:px-8 md:px-12 border-t border-bone/5"
       aria-labelledby="contact-heading"
     >
       {/* Background pattern */}
@@ -271,7 +271,7 @@ export function ContactSection() {
                 <div className="mt-4 flex">
                   <MagneticButton
                     type="submit"
-                    className="glass inline-flex h-13 w-48 items-center justify-center rounded-full text-xs uppercase tracking-[0.24em] text-champagne transition-colors hover:border-champagne/45 hover:bg-champagne hover:text-ink"
+                    className="border border-champagne inline-flex h-13 w-48 items-center justify-center text-xs uppercase tracking-[0.24em] text-champagne transition-colors duration-300 hover:bg-champagne hover:text-ink"
                   >
                     Submit Inquiry
                   </MagneticButton>
@@ -294,7 +294,7 @@ export function ContactSection() {
                       setFormState({ name: "", email: "", property: "", message: "" });
                       setSubmitted(false);
                     }}
-                    className="glass inline-flex h-11 w-44 items-center justify-center rounded-full text-xs uppercase tracking-[0.25em] text-bone/65 transition-colors hover:bg-bone hover:text-ink"
+                    className="border border-bone/40 inline-flex h-11 w-44 items-center justify-center text-xs uppercase tracking-[0.25em] text-bone/65 transition-colors duration-300 hover:bg-bone hover:text-ink"
                   >
                     Submit Another
                   </MagneticButton>

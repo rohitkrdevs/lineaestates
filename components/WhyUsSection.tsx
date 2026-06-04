@@ -79,7 +79,7 @@ export function WhyUsSection() {
     <section
       ref={containerRef}
       id="why-us"
-      className="relative isolate bg-ink px-5 py-32 sm:px-8 md:px-12 border-t border-bone/5"
+      className="relative isolate bg-transparent px-5 py-32 sm:px-8 md:px-12 border-t border-bone/5"
       aria-label="Why Linea Estates"
     >
       <div className="relative z-10 mx-auto w-full max-w-[1500px]">
