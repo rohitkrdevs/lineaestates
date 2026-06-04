@@ -148,7 +148,7 @@ export function FooterSection() {
                 <div className="mt-2 flex">
                   <MagneticButton
                     type="submit"
-                    className="border border-champagne inline-flex h-9 w-32 items-center justify-center text-xs uppercase tracking-[0.2em] text-champagne transition-colors duration-300 hover:bg-champagne hover:text-ink"
+                    className="border border-champagne inline-flex items-center justify-center px-6 py-2.5 text-xs uppercase tracking-[0.2em] text-champagne transition-colors duration-300 hover:bg-champagne hover:text-ink"
                   >
                     Subscribe
                   </MagneticButton>

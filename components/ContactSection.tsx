@@ -271,7 +271,7 @@ export function ContactSection() {
                 <div className="mt-4 flex">
                   <MagneticButton
                     type="submit"
-                    className="border border-champagne inline-flex h-13 w-48 items-center justify-center text-xs uppercase tracking-[0.24em] text-champagne transition-colors duration-300 hover:bg-champagne hover:text-ink"
+                    className="border border-champagne inline-flex items-center justify-center px-8 py-3.5 text-xs uppercase tracking-[0.24em] text-champagne transition-colors duration-300 hover:bg-champagne hover:text-ink"
                   >
                     Submit Inquiry
                   </MagneticButton>
@@ -294,7 +294,7 @@ export function ContactSection() {
                       setFormState({ name: "", email: "", property: "", message: "" });
                       setSubmitted(false);
                     }}
-                    className="border border-bone/40 inline-flex h-11 w-44 items-center justify-center text-xs uppercase tracking-[0.25em] text-bone/65 transition-colors duration-300 hover:bg-bone hover:text-ink"
+                    className="border border-bone/40 inline-flex items-center justify-center px-8 py-3.5 text-xs uppercase tracking-[0.25em] text-bone/65 transition-colors duration-300 hover:bg-bone hover:text-ink"
                   >
                     Submit Another
                   </MagneticButton>

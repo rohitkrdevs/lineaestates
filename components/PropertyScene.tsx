@@ -225,7 +225,7 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
             <div className="mt-8 flex justify-start">
               <MagneticButton
                 href={`mailto:studio@lineaestates.com?subject=Inquiry: ${property.title}`}
-                className="border border-champagne inline-flex h-12 w-48 items-center justify-center text-xs uppercase tracking-[0.24em] text-champagne transition-colors duration-300 hover:bg-champagne hover:text-ink"
+                className="border border-champagne inline-flex items-center justify-center px-8 py-3.5 text-xs uppercase tracking-[0.24em] text-champagne transition-colors duration-300 hover:bg-champagne hover:text-ink"
               >
                 <span className="flex items-center gap-2">
                   Request Viewing

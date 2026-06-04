@@ -127,7 +127,7 @@ export function CTASection() {
         <div className="mt-12 flex justify-center">
           <MagneticButton
             href="#contact"
-            className="border border-bone inline-flex h-16 w-56 items-center justify-center text-[0.7rem] uppercase tracking-[0.28em] text-bone transition-colors duration-300 hover:bg-bone hover:text-ink"
+            className="border border-bone inline-flex items-center justify-center px-8 py-3.5 sm:px-10 sm:py-4 text-[0.7rem] uppercase tracking-[0.28em] text-bone transition-colors duration-300 hover:bg-bone hover:text-ink"
           >
             <span className="flex items-center gap-2">
               Begin Inquiry
