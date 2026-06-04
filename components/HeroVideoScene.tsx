@@ -135,7 +135,7 @@ export function HeroVideoScene() {
           <div ref={buttonWrapperRef} className="mt-12 flex flex-wrap gap-5 will-transform">
             <MagneticButton
               href="#properties"
-              className="border border-white/25 inline-flex items-center justify-center px-8 py-3.5 sm:px-10 sm:py-4 text-[0.7rem] sm:text-xs uppercase tracking-[0.28em] text-white transition-colors duration-300 hover:border-white hover:bg-white hover:text-ink"
+              className="border border-white/25 inline-flex items-center justify-center px-8 py-3.5 sm:px-10 sm:py-4 text-[0.7rem] sm:text-xs uppercase tracking-[0.28em] text-white transition-colors duration-300 hover:border-white hover:bg-white hover:text-bone"
             >
               <span className="flex items-center gap-3">
                 Explore Residences

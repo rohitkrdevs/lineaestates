@@ -48,6 +48,42 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
       const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       if (reduced) return;
 
+      // 1. Reveal masks based on property specification (runs as the section scrolls into view)
+      let maskStart = {};
+      let maskEnd = {};
+
+      if (property.reveal === "clip") {
+        maskStart = { clipPath: "inset(100% 0% 0% 0%)" };
+        maskEnd = { clipPath: "inset(0% 0% 0% 0%)" };
+      } else if (property.reveal === "curtain") {
+        maskStart = { clipPath: "inset(0% 100% 0% 0%)" };
+        maskEnd = { clipPath: "inset(0% 0% 0% 0%)" };
+      } else if (property.reveal === "stagger") {
+        maskStart = { clipPath: "inset(16% 20% 16% 20% round 32px)" };
+        maskEnd = { clipPath: "inset(0% 0% 0% 0% round 0px)" };
+      } else if (property.reveal === "slide") {
+        maskStart = { clipPath: "inset(0% 0% 0% 100%)" };
+        maskEnd = { clipPath: "inset(0% 0% 0% 0%)" };
+      } else {
+        maskStart = { opacity: 0, scale: 0.95 };
+        maskEnd = { opacity: 1, scale: 1 };
+      }
+
+      gsap.fromTo(
+        mask,
+        maskStart,
+        {
+          ...maskEnd,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top bottom",
+            end: "top top",
+            scrub: 1.2
+          }
+        }
+      );
+
       // Pin the section while scrolling through the entrance and exit phases of the property scene
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -59,49 +95,6 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
           anticipatePin: 1
         }
       });
-
-      // 1. Reveal masks based on property specification
-      if (property.reveal === "clip") {
-        // Scene 02 (Property 1): Reveal from bottom
-        tl.fromTo(
-          mask,
-          { clipPath: "inset(100% 0% 0% 0%)" },
-          { clipPath: "inset(0% 0% 0% 0%)", ease: "none" },
-          0
-        );
-      } else if (property.reveal === "curtain") {
-        // Scene 03 (Property 2): Side curtain reveal
-        tl.fromTo(
-          mask,
-          { clipPath: "inset(0% 100% 0% 0%)" },
-          { clipPath: "inset(0% 0% 0% 0%)", ease: "none" },
-          0
-        );
-      } else if (property.reveal === "stagger") {
-        // Scene 04 (Property 3): Rounded rectangle mask expands
-        tl.fromTo(
-          mask,
-          { clipPath: "inset(16% 20% 16% 20% round 32px)" },
-          { clipPath: "inset(0% 0% 0% 0% round 0px)", ease: "none" },
-          0
-        );
-      } else if (property.reveal === "slide") {
-        // Scene 05 (Property 4): Split-screen slide
-        tl.fromTo(
-          mask,
-          { clipPath: "inset(0% 0% 0% 100%)" },
-          { clipPath: "inset(0% 0% 0% 0%)", ease: "none" },
-          0
-        );
-      } else {
-        // Scene 06 (Property 5): Custom scale fade
-        tl.fromTo(
-          mask,
-          { opacity: 0, scale: 0.95 },
-          { opacity: 1, scale: 1, ease: "none" },
-          0
-        );
-      }
 
       // 2. Parallax scale on the background video (zooms out from 1.15 to 1)
       tl.fromTo(
@@ -115,17 +108,17 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
       const side = index % 2 === 0 ? 1 : -1;
       
       tl.fromTo(
-        title,
-        { y: 80, opacity: 0 },
-        { y: 0, opacity: 1, ease: "power2.out" },
-        0.18
-      );
-
-      tl.fromTo(
         number,
         { scale: 0.82, opacity: 0 },
         { scale: 1, opacity: 0.45, ease: "power2.out" },
-        0.15
+        0.0
+      );
+
+      tl.fromTo(
+        title,
+        { y: 80, opacity: 0 },
+        { y: 0, opacity: 1, ease: "power2.out" },
+        0.05
       );
 
       const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
@@ -136,7 +129,7 @@ export function PropertyScene({ property, index }: PropertySceneProps) {
         details,
         { x: slideX, y: slideY, opacity: 0, scale: 0.96 },
         { x: 0, y: 0, opacity: 1, scale: 1, ease: "power3.out" },
-        0.28
+        0.12
       );
 
       // 4. Subtle exit fade out/scale down towards the end of the section pin
